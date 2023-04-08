@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 uvicorn = {extras = ["standard"], version = "*"}
 fastapi = "*"
+pymongo = "*"
 
 [dev-packages]
 autopep8 = "*"
