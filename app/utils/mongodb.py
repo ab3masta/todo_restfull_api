@@ -1,8 +1,15 @@
+import os
 import pymongo
+from dotenv import load_dotenv
+
+
+load_dotenv()  # take environment variables from .env.
+
+mongo_uri = os.environ.get("MONGO_URI")
 
 
 def mongo_client():
-    client = pymongo.MongoClient('mongodb://localhost:27017/')
+    client = pymongo.MongoClient(mongo_uri)
     return client
 
 
