@@ -9,15 +9,23 @@ This is a RESTful API for managing tasks, built with FastAPI and Python. The pro
 3. Create a `.env` file with your Firebase credentials, MongoDB URI, and PostgreSQL URI. Example:
 
     ```
+    # FIREBASE
     FIREBASE_API_KEY=your-api-key
     FIREBASE_AUTH_DOMAIN=your-auth-domain
+    FIREBASE_DATABASE_URL=your-database-url
     FIREBASE_PROJECT_ID=your-project-id
-    MONGO_URI=mongodb://localhost:27017/todo
-    POSTGRES_URI=postgresql://user:password@localhost:5432/todo
+    FIREBASE_STORAGE_BUCKET=your-storage-bucket
+    FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+    FIREBASE_APP_ID=your-app-id
+    FIREBASE_MEASUREMENT_ID=your-measurement-id
+    # MongoDB
+    MONGO_URI=mongodb://localhost:27017/task
+    # POSTGRESQl
+    POSTGRES_URI=postgresql://user:password@localhost:5432/task
     ```
 
-4. Start the server with `uvicorn app.main:app --reload`.
-5. Open your browser and go to `http://localhost:8000/docs` to access the API documentation.
+1. Start the server with `py app/main.py`.
+2. Open your browser and go to `http://localhost:8000/docs` to access the API documentation.
 
 ## 🛠️ Technologies
 
