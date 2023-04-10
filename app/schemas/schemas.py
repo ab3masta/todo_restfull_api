@@ -1,8 +1,12 @@
-from pydantic import BaseModel
-from typing import Optional
+from typing import List, Optional, Generic, TypeVar
+from pydantic import BaseModel, Field
+from pydantic.generics import GenericModel
+
+T = TypeVar('T')
 
 
 class Task(BaseModel):
+    id: Optional[int] = None
     title: str
     description: Optional[str] = None
     completed: bool
@@ -16,3 +20,12 @@ class Task(BaseModel):
             "due_date":  self.due_date,
         }
 
+    class Config:
+        orm_mode = True
+
+
+class Response(GenericModel, Generic[T]):
+    code: str
+    status: str
+    message: str
+    result: Optional[T]
