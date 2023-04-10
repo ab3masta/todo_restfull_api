@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-uvicorn = {extras = ["standard"], version = "*"}
+uvicorn = "*"
 fastapi = "*"
 pymongo = "*"
 python-dotenv = "*"
@@ -14,9 +14,13 @@ setuptools = "*"
 requests = "*"
 urllib3 = "*"
 pyrebase4 = "*"
+fastapi-sqlalchemy = "*"
+pydantic = "*"
+alembic = "*"
+psycopg2 = "*"
 
 [dev-packages]
 autopep8 = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"

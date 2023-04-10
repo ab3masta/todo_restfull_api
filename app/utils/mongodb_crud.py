@@ -1,5 +1,5 @@
 from ..schemas.schemas import Task
-from ..utils.mongodb import mongo_todo_collection
+from .database import mongo_todo_collection
 from bson.objectid import ObjectId
 
 
