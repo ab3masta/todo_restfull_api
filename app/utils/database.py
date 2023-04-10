@@ -18,15 +18,15 @@ def mongo_client():
     return client
 
 
-def mongo_todo_database():
+def mongo_task_database():
     client = mongo_client()
     db = client["main"]
     return db
 
 
-def mongo_todo_collection():
-    db = mongo_todo_database()
-    collection = db["todos"]
+def mongo_task_collection():
+    db = mongo_task_database()
+    collection = db["tasks"]
     return collection
 
 # ----------------  Postgres
