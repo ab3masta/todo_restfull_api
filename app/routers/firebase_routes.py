@@ -44,7 +44,9 @@ async def firebase_get_task(taskId: str):
                         code="200",
                         message="Successfully get task", result=task).dict(exclude_none=False)
     else:
-        raise HTTPException(status_code=401, detail="Task not found")
+        return Response(status="Ok",
+                        code="200",
+                        message="Task with this given id not found").dict(exclude_none=False)
 
 
 @router.put("/tasks/{taskId}")
@@ -55,7 +57,9 @@ async def firebase_update_task(taskId: str, task: Task):
                         code="200",
                         message="Successfully update task").dict(exclude_none=False)
     else:
-        raise HTTPException(status_code=401, detail="Task not updated")
+        return Response(status="Ok",
+                        code="200",
+                        message="Task with this given id not found").dict(exclude_none=False)
 
 
 @router.delete("/tasks/{taskId}")
