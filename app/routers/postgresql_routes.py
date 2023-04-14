@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends
-from schemas.schemas import Task
+from app.schemas.schemas import Task
 
-from utils.database import SessionLocal
+from app.utils.database import SessionLocal
 from sqlalchemy.orm import Session
 
-from utils.postgres_crud import *
+from app.utils.postgres_crud import *
 
-from schemas.schemas import Response
+from app.schemas.schemas import Response
 
 router = APIRouter()
 

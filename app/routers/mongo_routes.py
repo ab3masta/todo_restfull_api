@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from utils.mongodb_crud import *
-from schemas.schemas import Task
+from app.utils.mongodb_crud import *
+from app.schemas.schemas import Task
 
 router = APIRouter()
 

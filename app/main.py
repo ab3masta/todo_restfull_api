@@ -1,9 +1,9 @@
 import uvicorn
 from fastapi import FastAPI
-from routers.main_routes import router as mainRoutes
-from routers.firebase_routes import router as firebaseRoutes
-from routers.mongo_routes import router as mongoRoutes
-from routers.postgresql_routes import router as postgresqlRoutes
+from app.routers.main_routes import router as mainRoutes
+from app.routers.firebase_routes import router as firebaseRoutes
+from app.routers.mongo_routes import router as mongoRoutes
+from app.routers.postgresql_routes import router as postgresqlRoutes
 
 
 app = FastAPI(title="Todo RestFull Api",

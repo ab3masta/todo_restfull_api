@@ -5,4 +5,4 @@ router = APIRouter()
 
 @router.get("/")
 async def root():
-    return "Todo RestFull API"
+    return {"api": "Todo RestFull API"}
