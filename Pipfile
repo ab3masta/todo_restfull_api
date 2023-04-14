@@ -18,6 +18,9 @@ fastapi-sqlalchemy = "*"
 pydantic = "*"
 alembic = "*"
 psycopg2 = "*"
+pytest = "*"
+httpx = "*"
+pytest-cov = "*"
 
 [dev-packages]
 autopep8 = "*"

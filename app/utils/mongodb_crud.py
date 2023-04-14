@@ -1,4 +1,4 @@
-from schemas.schemas import Task
+from app.schemas.schemas import Task
 from .database import mongo_task_collection
 from bson.objectid import ObjectId
 

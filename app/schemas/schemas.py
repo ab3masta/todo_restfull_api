@@ -28,4 +28,4 @@ class Response(GenericModel, Generic[T]):
     code: str
     status: str
     message: str
-    result: Optional[T]
+    result: Optional[T] = None
