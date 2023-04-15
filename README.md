@@ -25,7 +25,7 @@ This is a RESTful API for managing tasks, built with FastAPI and Python. The pro
     ```
 
 1. Start the server with `uvicorn app.main:app`.
-2. Open your browser and go to `http://localhost:8000/docs` to access the API documentation.
+2. Open your browser and go to `http://localhost:8000/docs` to access the API documentation. The `username:admin@gmail.com` and `password:123456789` for authentication.
 
 ## 🛠️ Technologies
 
