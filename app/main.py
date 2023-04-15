@@ -3,9 +3,10 @@ from app.routers.main_routes import router as mainRoutes
 from app.routers.firebase_routes import router as firebaseRoutes
 from app.routers.mongo_routes import router as mongoRoutes
 from app.routers.postgresql_routes import router as postgresqlRoutes
-from app.routers.security import router as securityRoutes
+from app.routers.security_routes import router as securityRoutes
 from fastapi.openapi.utils import get_openapi
-from app.routers.security import get_current_username
+from app.admin.authorization import firebaseAdminAuth
+
 
 app = FastAPI(title="Todo RestFull Api",
 
@@ -16,7 +17,7 @@ app = FastAPI(title="Todo RestFull Api",
 
 # Use it directly here to avoid this error ==> Error loading ASGI app. Could not import module "app.main".
 @app.get("/openapi.json", include_in_schema=False)
-async def openapi(username: str = Depends(get_current_username)):
+async def openapi(username: str = Depends(firebaseAdminAuth)):
     return get_openapi(title=app.title, version=app.version, routes=app.routes)
 
 app.include_router(mainRoutes, prefix="", tags=["Root"])
